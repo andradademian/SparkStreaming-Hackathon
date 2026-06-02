@@ -145,6 +145,7 @@ html = f"""<!doctype html>
 </html>
 """
 
+os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
 with open(OUT_PATH, "w", encoding="utf-8") as f:
     f.write(html)
 print(f"Wrote {OUT_PATH} ({os.path.getsize(OUT_PATH)/1024:.1f} KB)")
